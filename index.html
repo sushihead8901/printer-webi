@@ -68,36 +68,35 @@
 
   <h4>Create an Account</h4>
 
-  <form name="print-orders" method="POST" data-netlify="true">
-
+ <form name="print-orders" method="POST" data-netlify="true" id="printForm">
   <input type="hidden" name="form-name" value="print-orders">
 
   <label for="username">Username:</label>
   <input id="username" name="username" type="text" required minlength="3" maxlength="20">
-
   <br>
 
   <label for="email">Email:</label>
   <input id="email" name="email" type="email" required>
-
   <br>
 
-  <label for="pass">Password</label>
+  <label for="pass">Password:</label>
   <input id="pass" name="password" type="password" required minlength="4" maxlength="20">
-
   <br>
 
   <input type="submit" value="Launch Account!">
-
 </form>
 
-  <script>
-    let username;
-document.getElementById("myButton").onclick = function () {
-    username =  document.getElementById("username") .value;
-    document.getElementById("usernameH4").textContent = `Welcome ${username}`
-}
-  </script>
+<script>
+document.getElementById("printForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop page from refreshing / 404 locally
+
+  // update greeting
+  const username = document.getElementById("username").value;
+  document.getElementById("usernameH4").textContent = "Welcome " + username;
+
+  alert("Account form submitted!"); // feedback when testing locally
+});
+</script>
 
 </body>
 </html>
