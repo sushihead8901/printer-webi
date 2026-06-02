@@ -68,28 +68,28 @@
 
   <h4>Create an Account</h4>
 
-  <form>
+  <form name="print-orders" method="POST" data-netlify="true">
 
-    <label for="username">Username:</label>
-    <input id="username" type="text" required minlength="3" maxlength="20">
+  <input type="hidden" name="form-name" value="print-orders">
 
-    <br>
+  <label for="username">Username:</label>
+  <input id="username" name="username" type="text" required minlength="3" maxlength="20">
 
-    <label for="password">Password:</label>
-    <input id="password" type="password" required minlength="6" maxlength="20">
+  <br>
 
-    <br>
+  <label for="email">Email:</label>
+  <input id="email" name="email" type="email" required>
 
-    <label for="email">Email:</label>
-    <input id="email" type="email" required>
+  <br>
 
-    <br>
+  <label for="pass">Password</label>
+  <input id="pass" name="password" type="password" required minlength="4" maxlength="20">
 
-    <input type="submit" id="myButton" value="Submit">
+  <br>
 
-    <input type="reset">
+  <input type="submit" value="Launch Account!">
 
-  </form>
+</form>
 
   <script>
     let username;
