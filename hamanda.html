@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamanda EPPS</title>
+  
+  <link rel="icon" type="image/png" href="">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Hamanda Enterprise Printer Service</h1>
+    <h3>Fast Printing, Cheap Prints</h3>
+    <h4 id="usernameH4">Welcome, Guest</h4>
+  </header>
+
+  <hr>
+
+  <div id="boxP1">
+    <p>
+      We print documents just for <strong>YOU</strong>!
+      Our prints are cheap! It's <u>reliable</u>, <b>fast</b>, and cheap!
+    </p>
+  </div>
+
+  <br>
+
+  <p>Our prices are below this text</p>
+
+  <table border="4">
+    <caption>Print J*bs</caption>
+
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+
+    <tr>
+      <td>1 Page</td>
+      <td>$1.00</td>
+    </tr>
+
+    <tr>
+      <td>1 Copy</td>
+      <td>Depends on pages</td>
+    </tr>
+
+    <tr>
+      <td>TAX</td>
+      <td>5.60%</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <h4>Printing Submitions</h4>
+
+  <a href="https://forms.gle/hb4MoTE2VTM2nhn89" target="_blank">
+    <button>Submit a Print J*B</button>
+  </a>
+
+  <br>
+
+  <hr>
+
+  <h4>Create an Account</h4>
+
+  <form>
+
+    <label for="username">Username:</label>
+    <input id="username" type="text" required minlength="3" maxlength="20">
+
+    <br>
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" required minlength="6" maxlength="20">
+
+    <br>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" required>
+
+    <br>
+
+    <input type="submit" id="myButton" value="Submit">
+
+    <input type="reset">
+
+  </form>
+
+  <script>
+    let username;
+document.getElementById("myButton").onclick = function () {
+    username =  document.getElementById("username") .value;
+    document.getElementById("usernameH4").textContent = `Welcome ${username}`
+}
+  </script>
+
+</body>
+</html>
